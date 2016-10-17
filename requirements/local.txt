@@ -1,0 +1,5 @@
+# Local development dependencies go here
+-r base.txt
+
+# improved REPL
+ipdb==0.10.1
