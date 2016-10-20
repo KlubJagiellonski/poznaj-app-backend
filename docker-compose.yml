@@ -1,0 +1,27 @@
+version: '2'
+
+services:
+  postgres:
+    image: postgres
+    environment:
+      - POSTGRES_USER=poznajwroclaw
+      - POSTGRES_PASSWORD=poznajwroclaw
+      - POSTGRES_DB=poznajwroclawdb
+  django:
+    build:
+      context: .
+      dockerfile: ./compose/django/Dockerfile
+    command: python manage.py runserver 0.0.0.0:8000
+    depends_on:
+      - postgres
+    environment:
+      - POSTGRES_USER=poznajwroclaw
+      - POSTGRES_PASSWORD=poznajwroclaw
+      - POSTGRES_DB=poznajwroclawdb
+      - DATABASE_URL=postgres://poznajwroclaw:poznajwroclaw@postgres:5432/poznajwroclawdb
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    links:
+      - postgres
