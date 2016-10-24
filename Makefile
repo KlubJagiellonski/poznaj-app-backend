@@ -10,7 +10,11 @@ clean-build:
 	rm -fr dist/
 	rm -fr *.egg-info
 
-clean: clean-build clean-pyc
+clean-artifacts:
+	rm -fr .tox/
+	rm -fr .cache/
+
+clean: clean-build clean-pyc clean-artifacts
 
 run:
 	docker-compose build
@@ -21,3 +25,12 @@ make-migrations:
 
 migrate:
 	docker-compose run django python manage.py migrate
+
+test:
+	docker-compose exec django sh -c 'pip install -r requirements/test.txt && py.test --cov-report term-missing --cov=poznajwroclaw --verbose'
+
+enter-docker:
+	docker-compose run django bash
+
+lint:
+	docker-compose exec django sh -c 'pip install -r requirements/test.txt && flake8 .'
