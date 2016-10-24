@@ -32,3 +32,8 @@ To create superuser use:
 ::
 
     $ docker-compose run django python manage.py createsuperuser
+
+To run test (after you run ``make run``) use:
+::
+
+    $ make test
