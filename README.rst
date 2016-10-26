@@ -1,56 +1,77 @@
 Poznaj Wrocław
 ==============
 
-This is repo containing code for backend of Poznaj Wrocław application.
+.. image:: https://travis-ci.org/kj-wroclaw/poznajwroclaw-backend.svg?branch=master
+    :target: https://travis-ci.org/kj-wroclaw/poznajwroclaw-backend
+    :alt: Build Status
 
-Development
------------
+This `Django`_ project includes code for backend of Poznaj Wrocław application. It tries to follow
+`12 Factor App Guinness <https://12factor.net/>`_.
+
+.. _Django: <https://www.djangoproject.com/>
+
+Quickstart
+----------
+
+Full `installation`_ instructions.
+
+.. _installation:
 
 To develop locally we use docker + docker compose. First make sure that you
 installed docker by following these instructions: `link <https://docker.github.io/engine/installation/>`_.
-Then install `docker-compose <https://docs.docker.com/compose/>`_ by:
-::
+Then run this command to run server & apply migrations.::
 
-    $ pip install docker-compose
-
-After this setup you are ready to go! First run application:
-::
-
+    $ make build
     $ make run
-
-Then make migrations:
-::
-
-    $ make make-migrations
-
-And migrate:
-::
-
     $ make migrate
 
-To create superuser use:
+
+Documentation
+-------------
+
+Documentation for this project is available in the `docs`_ directory and `online`_.
+
+.. _docs:
+
+.. _online:
+
+If you would like to browse the documentation locally, you can do so with `sphinx`:
 ::
 
-    $ docker-compose run django python manage.py createsuperuser
+    $ git clone git@github.com:kj-wroclaw/poznajwroclaw-backend.git
+    $ cd poznajwroclaw-backend
+    $ pip install virtualenv
+    $ virtualenv -p /usr/bin/python3 ~/.virtualenvs/poznajwroclaw-backend
+    $ source ~/.virtualenvs/poznajwroclaw-backend/bin/activate
+    (poznajwroclaw-backend) $ pip install -r requirements/local.txt
+    (poznajwroclaw-backend) $ cd docs
+    (poznajwroclaw-backend) $ make html
+    (poznajwroclaw-backend) $ sphinx-autobuild . _build_html
 
-To run test (after you run ``make run``) use:
-::
 
-    $ make test
+Getting help
+------------
 
+Use the `issue tracker <https://github.com/kj-wroclaw/poznajwroclaw-backend/issues>`_ to follow the development conversation.
+If you find a bug not listed in the issue tracker, please `file a bug report <https://github.com/kj-wroclaw/poznajwroclaw-backend/issues/new>`_.
 
-Licence
------------
-Copyright 2016 Poznaj Wrocław
+Getting involved
+----------------
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+We welcome your feedback and contributions. See the `contribution guidelines <https://github.com/kj-wroclaw/poznajwroclaw-backend>`_ for more details.
 
-    http://www.apache.org/licenses/LICENSE-2.0
+License
+-------
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+1. `LICENSE <https://github.com/kj-wroclaw>`_
+
+Credits
+-------
+
+1. `Cookiecutter-django`_
+2. `Cfgov-refresh`_
+3. `Open-source-project-template`_
+
+.. _Cookiecutter-django: https://github.com/pydanny/cookiecutter-django
+.. _Cfgov-refresh: https://github.com/cfpb/cfgov-refresh
+.. _Open-source-project-template: https://github.com/cfpb/open-source-project-template

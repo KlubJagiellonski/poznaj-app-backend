@@ -1,5 +1,5 @@
 # Test dependencies go here.
--r base.txt
+-r local.txt
 
 # code analysis
 flake8==3.0.4

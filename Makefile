@@ -1,4 +1,7 @@
-.PHONY: clean-pyc clean-build
+.PHONY: help
+
+help:
+	@echo "Help"
 
 clean-pyc:
 	find . -name '*.pyc' -exec rm -f {} +
@@ -16,8 +19,10 @@ clean-artifacts:
 
 clean: clean-build clean-pyc clean-artifacts
 
-run:
+build:
 	docker-compose build
+
+run:
 	docker-compose up
 
 make-migrations:
@@ -34,3 +39,6 @@ enter-docker:
 
 lint:
 	docker-compose exec django sh -c 'pip install -r requirements/test.txt && flake8 .'
+
+isort:
+	docker-compose exec django sh -c 'isort --skip-glob=.?* -rc .'

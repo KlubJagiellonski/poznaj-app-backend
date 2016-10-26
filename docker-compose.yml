@@ -19,6 +19,7 @@ services:
       - POSTGRES_PASSWORD=poznajwroclaw
       - POSTGRES_DB=poznajwroclawdb
       - DATABASE_URL=postgres://poznajwroclaw:poznajwroclaw@postgres:5432/poznajwroclawdb
+      - USE_DOCKER=yes
     volumes:
       - .:/app
     ports:
