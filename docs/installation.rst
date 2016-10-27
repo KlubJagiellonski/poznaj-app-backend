@@ -46,7 +46,8 @@ These instructions are specific to Ubuntu Linux but will be similar for other UN
 
 3. Install `virtualenv`_  to be able to create a local environment for your server:
 
-.. _virtualenv:
+.. _virtualenv: https://virtualenv.pypa.io/en/stable/
+
 
 ::
 
@@ -76,7 +77,8 @@ Make sure that you have python 3 installed as we are using this version.
 
 7. Install `autoenv`_ and put there:
 
-.. _autoenv:
+.. _autoenv: https://github.com/kennethreitz/autoenv
+
 
 ::
 

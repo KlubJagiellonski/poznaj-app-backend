@@ -1,5 +1,8 @@
 version: '2'
 
+volumes:
+  postgres_data_dev: {}
+
 services:
   postgres:
     image: postgres
@@ -7,6 +10,8 @@ services:
       - POSTGRES_USER=poznajwroclaw
       - POSTGRES_PASSWORD=poznajwroclaw
       - POSTGRES_DB=poznajwroclawdb
+    volumes:
+      - postgres_data_dev:/var/lib/postgresql/data
   django:
     build:
       context: .

@@ -5,6 +5,11 @@ Poznaj Wrocław
     :target: https://travis-ci.org/kj-wroclaw/poznajwroclaw-backend
     :alt: Build Status
 
+.. image:: https://readthedocs.org/projects/poznajwroclaw-backend/badge/?version=latest
+    :target: http://poznajwroclaw-backend.readthedocs.io/en/latest/?badge=latest
+    :alt: Documentation Status
+
+
 This `Django`_ project includes code for backend of Poznaj Wrocław application. It tries to follow
 `12 Factor App Guinness <https://12factor.net/>`_.
 
@@ -15,7 +20,8 @@ Quickstart
 
 Full `installation`_ instructions.
 
-.. _installation:
+.. _installation: http://poznajwroclaw-backend.readthedocs.io/en/latest/installation.html
+
 
 To develop locally we use docker + docker compose. First make sure that you
 installed docker by following these instructions: `link <https://docker.github.io/engine/installation/>`_.
@@ -31,9 +37,10 @@ Documentation
 
 Documentation for this project is available in the `docs`_ directory and `online`_.
 
-.. _docs:
+.. _docs: https://github.com/kj-wroclaw/poznajwroclaw-backend/tree/master/docs
 
-.. _online:
+.. _online: http://poznajwroclaw-backend.readthedocs.io/en/latest/index.html
+
 
 If you would like to browse the documentation locally, you can do so with `sphinx`:
 ::
@@ -58,12 +65,16 @@ If you find a bug not listed in the issue tracker, please `file a bug report <ht
 Getting involved
 ----------------
 
-We welcome your feedback and contributions. See the `contribution guidelines <https://github.com/kj-wroclaw/poznajwroclaw-backend>`_ for more details.
+We welcome your feedback and contributions. See the `contribution guidelines`_ for more details.
+
+.. _contribution guidelines <https://github.com/kj-wroclaw/poznajwroclaw-backend/blob/master/.github/CONTRIBUTING.md>:
+
 
 License
 -------
 
-1. `LICENSE <https://github.com/kj-wroclaw>`_
+1. `LICENSE <https://github.com/kj-wroclaw/poznajwroclaw-backend/blob/master/LICENSE>`_
+
 
 Credits
 -------

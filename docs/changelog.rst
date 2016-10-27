@@ -4,7 +4,15 @@ Changelog
 All enhancements and patches to Poznaj Wroclaw backend will be documented in this file.
 This project adheres to `Semantic Versioning <http://semver.org/>`_.
 
-v0.4.0 (unreleased)
+v0.6.0 (unreleased)
++++++++++++++++++++
+* Unreleased
+
+v0.5.0 (2016-10-27)
++++++++++++++++++++
+* Fixing small errors in docs @krzysztofzuraw
+
+v0.4.0 (2016-10-26)
 +++++++++++++++++++
 * Add various files for ease development @krzysztofzuraw
 

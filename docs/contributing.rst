@@ -13,10 +13,12 @@ Getting your pull request merged in
 Installation + running the tests
 --------------------------------
 
-Please refer to `online documentation <>`_ on how to install this project.
+Please refer to `online documentation`_ on how to install this project.
 
-Code guideness
---------------
+.. _online documentation: http://poznajwroclaw-backend.readthedocs.io/en/latest/installation.html
+
+Code conventions
+----------------
 
 * For python follow `PEP8 <https://www.python.org/dev/peps/pep-0008/>`_ with 120 line characters limit
 * For javascript follow `airbnb <https://github.com/airbnb/javascript>`_
