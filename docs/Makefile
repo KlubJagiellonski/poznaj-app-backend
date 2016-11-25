@@ -91,9 +91,9 @@ qthelp:
 	@echo
 	@echo "Build finished; now you can run "qcollectiongenerator" with the" \
 	      ".qhcp project file in $(BUILDDIR)/qthelp, like this:"
-	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/poznajwroclaw-backend.qhcp"
+	@echo "# qcollectiongenerator $(BUILDDIR)/qthelp/poznaj-backend.qhcp"
 	@echo "To view the help file:"
-	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/poznajwroclaw-backend.qhc"
+	@echo "# assistant -collectionFile $(BUILDDIR)/qthelp/poznaj-backend.qhc"
 
 .PHONY: applehelp
 applehelp:
@@ -110,8 +110,8 @@ devhelp:
 	@echo
 	@echo "Build finished."
 	@echo "To view the help file:"
-	@echo "# mkdir -p $$HOME/.local/share/devhelp/poznajwroclaw-backend"
-	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/poznajwroclaw-backend"
+	@echo "# mkdir -p $$HOME/.local/share/devhelp/poznaj-backend"
+	@echo "# ln -s $(BUILDDIR)/devhelp $$HOME/.local/share/devhelp/poznaj-backend"
 	@echo "# devhelp"
 
 .PHONY: epub

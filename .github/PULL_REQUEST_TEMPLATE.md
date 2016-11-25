@@ -37,7 +37,7 @@ Short description explaining the high-level reason for the pull request
 
 * [ ] Changes are limited to a single goal (no scope creep)
 * [ ] Code can be automatically merged (no conflicts)
-* [ ] Code follows the standards laid out in the [contributing](https://github.com/kj-wroclaw/poznajwroclaw-backend/blob/master/.github/CONTRIBUTING.md)
+* [ ] Code follows the standards laid out in the [contributing](https://github.com/kj-wroclaw/poznaj-backend/blob/master/.github/CONTRIBUTING.md)
 * [ ] Passes all existing automated tests
 * [ ] New functions include new tests
 * [ ] New functions are documented (with a description, list of inputs, and expected output)

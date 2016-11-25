@@ -1,5 +1,5 @@
 """
-WSGI config for poznajwroclaw project.
+WSGI config for poznaj project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

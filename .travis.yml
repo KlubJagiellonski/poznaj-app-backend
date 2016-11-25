@@ -11,6 +11,6 @@ before_script:
 env:
   - DATABASE_URL=postgres://postgres:postgres@postgres:5432/travis_ci_test
 after_success:
-  - codecov
+  - bash <(curl -s https://codecov.io/bash)
 notifications:
   email: false

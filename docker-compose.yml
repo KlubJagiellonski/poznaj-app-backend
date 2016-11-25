@@ -7,9 +7,9 @@ services:
   postgres:
     image: postgres
     environment:
-      - POSTGRES_USER=poznajwroclaw
-      - POSTGRES_PASSWORD=poznajwroclaw
-      - POSTGRES_DB=poznajwroclawdb
+      - POSTGRES_USER=poznaj
+      - POSTGRES_PASSWORD=poznaj
+      - POSTGRES_DB=poznajdb
     volumes:
       - postgres_data_dev:/var/lib/postgresql/data
   django:
@@ -20,10 +20,10 @@ services:
     depends_on:
       - postgres
     environment:
-      - POSTGRES_USER=poznajwroclaw
-      - POSTGRES_PASSWORD=poznajwroclaw
-      - POSTGRES_DB=poznajwroclawdb
-      - DATABASE_URL=postgres://poznajwroclaw:poznajwroclaw@postgres:5432/poznajwroclawdb
+      - POSTGRES_USER=poznaj
+      - POSTGRES_PASSWORD=poznaj
+      - POSTGRES_DB=poznajdb
+      - DATABASE_URL=postgres://poznaj:poznaj@postgres:5432/poznajdb
       - USE_DOCKER=yes
     volumes:
       - .:/app

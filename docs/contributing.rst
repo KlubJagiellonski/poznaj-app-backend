@@ -15,7 +15,7 @@ Installation + running the tests
 
 Please refer to `online documentation`_ on how to install this project.
 
-.. _online documentation: http://poznajwroclaw-backend.readthedocs.io/en/latest/installation.html
+.. _online documentation: http://poznaj-backend.readthedocs.io/en/latest/installation.html
 
 Code conventions
 ----------------

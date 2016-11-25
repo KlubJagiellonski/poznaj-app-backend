@@ -1,5 +1,5 @@
 [run]
-include = poznajwroclaw/*
+include = poznaj/*
 omit = *migrations*, *tests*
 plugins =
     django_coverage_plugin
