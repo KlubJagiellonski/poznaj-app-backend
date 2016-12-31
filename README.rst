@@ -10,7 +10,8 @@ Poznaj Wrocław
     :alt: Documentation Status
 
 .. image:: https://codecov.io/gh/kj-wroclaw/poznaj-backend/branch/master/graph/badge.svg
-  :target: https://codecov.io/gh/kj-wroclaw/poznaj-backend
+    :target: https://codecov.io/gh/kj-wroclaw/poznaj-backend
+
 
 
 This `Django`_ project includes code for backend of Poznaj Wrocław application. It tries to follow

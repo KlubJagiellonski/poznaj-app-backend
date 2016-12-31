@@ -53,3 +53,5 @@ TEMPLATES[0]['OPTIONS']['loaders'] = [
         'django.template.loaders.app_directories.Loader',
     ]),
 ]
+# Turn off APP_DIRS
+TEMPLATES[0]['APP_DIRS'] = False

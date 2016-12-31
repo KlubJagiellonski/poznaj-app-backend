@@ -4,9 +4,9 @@ Changelog
 All enhancements and patches to Poznaj Wroclaw backend will be documented in this file.
 This project adheres to `Semantic Versioning <http://semver.org/>`_.
 
-v0.6.0 (unreleased)
+v0.6.0 (2016-12-31)
 +++++++++++++++++++
-* Unreleased
+* Add basic models: Images, Points & Stories @krzysztofzuraw
 
 v0.5.0 (2016-10-27)
 +++++++++++++++++++

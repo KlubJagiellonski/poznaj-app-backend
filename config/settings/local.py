@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-import socket
 import os
+import socket
+
 from .common import *  # noqa
 
 # DEBUG
@@ -34,3 +35,7 @@ DEBUG_TOOLBAR_CONFIG = {
     ],
     'SHOW_TEMPLATE_CONTEXT': True,
 }
+
+# TESTING
+# ------------------------------------------------------------------------------
+TEST_RUNNER = 'django.test.runner.DiscoverRunner'

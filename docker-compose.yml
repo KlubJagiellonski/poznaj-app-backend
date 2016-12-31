@@ -5,7 +5,7 @@ volumes:
 
 services:
   postgres:
-    image: postgres
+    build: ./compose/postgres
     environment:
       - POSTGRES_USER=poznaj
       - POSTGRES_PASSWORD=poznaj

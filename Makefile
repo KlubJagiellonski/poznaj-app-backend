@@ -32,7 +32,7 @@ migrate:
 	docker-compose run django python manage.py migrate
 
 test:
-	docker-compose exec django sh -c 'pip install -r requirements/test.txt && py.test --cov-report term-missing --cov=poznaj --verbose'
+	docker-compose exec django sh -c 'pip install -r requirements/test.txt && coverage run manage.py test && coverage report'
 
 enter-docker:
 	docker-compose run django bash
@@ -42,3 +42,6 @@ lint:
 
 isort:
 	docker-compose exec django sh -c 'isort --skip-glob=.?* -rc .'
+
+shell:
+	docker-compose run django python manage.py shell

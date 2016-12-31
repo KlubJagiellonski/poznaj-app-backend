@@ -31,11 +31,20 @@ DJANGO_APPS = (
     'django.contrib.staticfiles',
     # Admin
     'django.contrib.admin',
+    # GIS
+    'django.contrib.gis'
 )
 
-THIRD_PARTY_APPS = ()
+THIRD_PARTY_APPS = (
+    'rest_framework',
+    'rest_framework_gis'
+)
 
-LOCAL_APPS = ()
+LOCAL_APPS = (
+    'poznaj.points.apps.PointsConfig',
+    'poznaj.images.apps.ImagesConfig',
+    'poznaj.stories.apps.StoriesConfig'
+)
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
@@ -63,6 +72,7 @@ DEBUG = env.bool('DJANGO_DEBUG', False)
 DATABASES = {
     'default': env.db('DATABASE_URL'),
 }
+DATABASES['default']['ENGINE'] = 'django.contrib.gis.db.backends.postgis'
 # GENERAL CONFIGURATION
 # ------------------------------------------------------------------------------
 LANGUAGE_CODE = 'en-us'
@@ -123,3 +133,17 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+# MEDIA CONFIGURATION
+# ------------------------------------------------------------------------------
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#media-root
+MEDIA_ROOT = str(APPS_DIR('media'))
+
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#media-url
+MEDIA_URL = '/media/'
+
+# DJANGO REST FRAMEWORK CONFIGURATION
+# -------------------------------------------------------------------------------
+REST_FRAMEWORK = {
+    'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.AcceptHeaderVersioning'
+}

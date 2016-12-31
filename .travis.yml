@@ -2,15 +2,21 @@ language: python
 python:
   - "3.5"
 install:
-  - pip install tox
+  - pip install --upgrade pip wheel setuptools coverage codecov django_coverage_plugin tox
 script: tox
 services:
   - postgresql
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
+  - psql -U postgres -c "create extension postgis"
 env:
-  - DATABASE_URL=postgres://postgres:postgres@postgres:5432/travis_ci_test
+  - DATABASE_URL=postgres://postgres:postgres@localhost:5432/travis_ci_test
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - coverage xml
+  - codecov
 notifications:
   email: false
+cache:
+  pip: true
+  directories:
+    - .tox
