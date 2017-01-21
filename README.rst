@@ -11,6 +11,7 @@ Poznaj Wrocław
 
 .. image:: https://codecov.io/gh/kj-wroclaw/poznaj-backend/branch/master/graph/badge.svg
     :target: https://codecov.io/gh/kj-wroclaw/poznaj-backend
+    :alt: Codecoverage Status
 
 
 
