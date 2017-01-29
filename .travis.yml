@@ -8,7 +8,6 @@ services:
   - postgresql
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
-  - psql -U postgres -c "create extension postgis"
 env:
   - DATABASE_URL=postgres://postgres:postgres@localhost:5432/travis_ci_test
 after_success:
@@ -18,5 +17,4 @@ notifications:
   email: false
 cache:
   pip: true
-  directories:
-    - .tox
+

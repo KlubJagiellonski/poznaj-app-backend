@@ -1,6 +1,8 @@
+import json
+
 from django.urls import reverse
 from rest_framework import status
-from rest_framework.test import APITestCase
+from test_plus.test import TestCase
 
 from poznaj.images.tests.factories import ImageFactory
 from poznaj.points.models import Point
@@ -8,13 +10,18 @@ from poznaj.points.models import Point
 from .factories import PointFactory
 
 
-class TestPointsViewSet(APITestCase):
+class TestPointsViewSet(TestCase):
 
     def setUp(self):
         self.image = ImageFactory()
         self.point = PointFactory.create(images=(self.image,))
         self.list_url = reverse('point-list')
         self.detail_url = reverse('point-detail', kwargs={'pk': self.point.id})
+        self.user = self.make_user('user_one')
+        self.client.login(username=self.user.username, password='password')
+
+    def tearDown(self):
+        self.image.image_file.delete()
 
     def test_get_all_points(self):
         response = self.client.get(self.list_url, format='json')
@@ -63,7 +70,19 @@ class TestPointsViewSet(APITestCase):
     def test_update_point(self):
         response = self.client.put(
             self.detail_url,
-            data={'title': 'new_title', 'description': 'new_description', 'geom': 'POINT (2 2)'}
+            data=json.dumps(
+                {
+                    'title': 'new_title',
+                    'description': 'new_description',
+                    'geom': 'POINT (2 2)',
+                    'images': [
+                        'http://testserver{}'.format(
+                            reverse('image-detail', kwargs={'pk': self.image.id})
+                        )
+                    ],
+                }
+            ),
+            content_type="application/json"
         )
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(Point.objects.count(), 1)

@@ -1,12 +1,12 @@
-Poznaj Wrocław
-==============
+Poznaj
+======
 
 .. image:: https://travis-ci.org/kj-wroclaw/poznaj-backend.svg?branch=master
     :target: https://travis-ci.org/kj-wroclaw/poznaj-backend
     :alt: Build Status
 
-.. image:: https://readthedocs.org/projects/poznaj-backend/badge/?version=latest
-    :target: http://poznaj-backend.readthedocs.io/en/latest/?badge=latest
+.. image:: http://poznajwroclaw-backend.readthedocs.io/en/latest/
+    :target: https://readthedocs.org/projects/poznajwroclaw-backend/badge/?version=latest
     :alt: Documentation Status
 
 .. image:: https://codecov.io/gh/kj-wroclaw/poznaj-backend/branch/master/graph/badge.svg
@@ -69,7 +69,7 @@ Getting involved
 
 We welcome your feedback and contributions. See the `contribution guidelines`_ for more details.
 
-.. _contribution guidelines <https://github.com/kj-wroclaw/poznaj-backend/blob/master/.github/CONTRIBUTING.md>:
+.. _contribution guidelines: https://github.com/kj-wroclaw/poznaj-backend/blob/master/.github/CONTRIBUTING.md
 
 
 License

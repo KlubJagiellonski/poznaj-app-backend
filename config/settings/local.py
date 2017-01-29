@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import os
 import socket
+import sys
 
 from .common import *  # noqa
 
@@ -20,8 +21,9 @@ AUTH_PASSWORD_VALIDATORS = []
 
 # django-debug-toolbar
 # ------------------------------------------------------------------------------
-MIDDLEWARE += ('debug_toolbar.middleware.DebugToolbarMiddleware',)
-INSTALLED_APPS += ('debug_toolbar', )
+if 'debug_toolbar' in sys.modules:
+    MIDDLEWARE += ('debug_toolbar.middleware.DebugToolbarMiddleware',)
+    INSTALLED_APPS += ('debug_toolbar', )
 
 INTERNAL_IPS = ['127.0.0.1', '10.0.2.2', ]
 
