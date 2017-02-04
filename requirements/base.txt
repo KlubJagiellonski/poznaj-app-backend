@@ -6,6 +6,7 @@ django==1.10.4
 
 # Configuration
 django-environ==0.4.0
+whitenoise==3.3.0
 
 # Python-PostgreSQL Database Adapter
 psycopg2==2.6.2
@@ -13,5 +14,9 @@ psycopg2==2.6.2
 # Images
 Pillow==3.4.2
 
+# DRFs
 djangorestframework==3.5.3
 djangorestframework-gis==0.11
+
+# Checks
+django-health-check==2.2.0

@@ -15,6 +15,7 @@ router.register(r'stories', StoriesViewSet)
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/', include(router.urls)),
+    url(r'^health/', include('health_check.urls')),
 ]
 
 if settings.DEBUG:

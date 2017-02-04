@@ -4,7 +4,11 @@ Changelog
 All enhancements and patches to Poznaj Wroclaw backend will be documented in this file.
 This project adheres to `Semantic Versioning <http://semver.org/>`_.
 
-v0.7.0 (2016-12-31)
+v1.0.0 (2017-02-04)
++++++++++++++++++++
+* Release 1.0.0 to heroku @krzysztofzuraw
+
+v0.7.0 (2017-01-28)
 +++++++++++++++++++
 * Add basic auth @krzysztofzuraw
 
