@@ -69,6 +69,7 @@ TEMPLATES[0]['OPTIONS']['loaders'] = [
 # DATABASE CONFIGURATION
 # ------------------------------------------------------------------------------
 DATABASES['default'] = env.db('DATABASE_URL')
+DATABASES['default']['ENGINE'] = 'django.contrib.gis.db.backends.postgis'
 
 # sentry
 SENTRY_DSN = env('DJANGO_SENTRY_DSN')
