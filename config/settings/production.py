@@ -1,3 +1,5 @@
+import logging
+
 from .common import *  # noqa
 
 # SECRET CONFIGURATION
