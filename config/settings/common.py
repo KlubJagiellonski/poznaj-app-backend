@@ -111,7 +111,10 @@ TEMPLATES = [
 # STATIC FILE CONFIGURATION
 # ------------------------------------------------------------------------------
 STATIC_URL = '/static/'
-
+STATIC_ROOT = str(ROOT_DIR('staticfiles'))
+STATICFILES_DIRS = (
+    str(APPS_DIR.path('static')),
+)
 # URL Configuration
 # ------------------------------------------------------------------------------
 ROOT_URLCONF = 'config.urls'
