@@ -13,7 +13,7 @@ router.register(r'points', PointsViewSet)
 router.register(r'stories', StoriesViewSet)
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    url(settings.ADMIN_URL, admin.site.urls),
     url(r'^api/', include(router.urls)),
     url(r'^health/', include('health_check.urls')),
 ]
