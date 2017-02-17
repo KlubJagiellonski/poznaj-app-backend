@@ -4,6 +4,10 @@ Changelog
 All enhancements and patches to Poznaj Wroclaw backend will be documented in this file.
 This project adheres to `Semantic Versioning <http://semver.org/>`_.
 
+v1.1.0 (2017-02-17)
++++++++++++++++++++
+* Stories & Points APIs now contain ids instead of urls @krzysztofzuraw
+
 v1.0.0 (2017-02-04)
 +++++++++++++++++++
 * Release 1.0.0 to heroku @krzysztofzuraw

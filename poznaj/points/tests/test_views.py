@@ -40,11 +40,7 @@ class TestPointsViewSet(TestCase):
                         'properties': {
                             'title': self.point.title,
                             'description': self.point.description,
-                            'images': [
-                                'http://testserver{}'.format(
-                                    reverse('image-detail', kwargs={'pk': self.image.id})
-                                )
-                            ],
+                            'images': [self.image.id],
                         }
                     }
                 ]
@@ -54,7 +50,10 @@ class TestPointsViewSet(TestCase):
     def test_create_point(self):
         response = self.client.post(
             self.list_url,
-            data={'title': 'example_point', 'description': 'example_desc', 'geom': 'POINT (1 1)'}
+            data={
+                'title': 'example_point', 'description': 'example_desc',
+                'geom': 'POINT (1 1)', 'images': [self.image.id]
+            }
         )
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(Point.objects.count(), 2)
@@ -75,11 +74,7 @@ class TestPointsViewSet(TestCase):
                     'title': 'new_title',
                     'description': 'new_description',
                     'geom': 'POINT (2 2)',
-                    'images': [
-                        'http://testserver{}'.format(
-                            reverse('image-detail', kwargs={'pk': self.image.id})
-                        )
-                    ],
+                    'images': [self.image.id],
                 }
             ),
             content_type="application/json"

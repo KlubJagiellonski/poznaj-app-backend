@@ -27,11 +27,7 @@ class TestStoriesViewSet(TestCase):
             response.json(),
             [{
                 'id': self.story.id,
-                'points': [
-                    'http://testserver{}'.format(
-                        reverse('point-detail', kwargs={'pk': self.point.id})
-                    )
-                ],
+                'points': [self.point.id],
                 'title': self.story.title,
                 'description': self.story.description,
                 'duration': '{:02}:00:{:02}'.format(
@@ -46,7 +42,8 @@ class TestStoriesViewSet(TestCase):
             data={
                 'title': 'my_story',
                 'description': 'example_description',
-                'duration': '00:01:00'
+                'duration': '00:01:00',
+                'points': [self.point.id],
             }
         )
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
@@ -68,11 +65,7 @@ class TestStoriesViewSet(TestCase):
                     'title': 'new_title',
                     'description': 'new_description',
                     'duration': '01:00:00',
-                    'points': [
-                        'http://testserver{}'.format(
-                            reverse('point-detail', kwargs={'pk': self.point.id})
-                        )
-                    ],
+                    'points': [self.point.id],
                 }
             ),
             content_type='application/json'
