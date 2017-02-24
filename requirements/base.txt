@@ -2,21 +2,21 @@
 # like Pillow and psycopg2
 wheel==0.29.0
 
-django==1.10.4
+django==1.10.5
 
 # Configuration
-django-environ==0.4.0
+django-environ==0.4.1
 whitenoise==3.3.0
 
 # Python-PostgreSQL Database Adapter
 psycopg2==2.6.2
 
 # Images
-Pillow==3.4.2
+Pillow==4.0.0
 
 # DRFs
-djangorestframework==3.5.3
+djangorestframework==3.5.4
 djangorestframework-gis==0.11
 
 # Checks
-django-health-check==2.2.0
+django-health-check==2.2.2
