@@ -4,7 +4,7 @@
 # documentation
 Sphinx==1.5.3
 sphinx-autobuild==0.6.0
-sphinx-rtd-theme==0.1.9
+sphinx-rtd-theme==0.2.2
 
 # improved REPL
 ipdb==0.10.2
