@@ -7,7 +7,7 @@ Clone the repository
 Using the console, navigate to the root directory in which your projects live and clone this project's repository:
 ::
 
-    $ git clone git@github.com:kj-wroclaw/poznaj-backend.git
+    $ git clone git@github.com:KlubJagiellonski/poznaj-app-backend.git
     $ cd poznaj-backend
 
 You may also wish to fork the repository on GitHub and clone the resultant personal fork.

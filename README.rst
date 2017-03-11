@@ -1,18 +1,25 @@
 Poznaj
 ======
 
-.. image:: https://travis-ci.org/kj-wroclaw/poznaj-backend.svg?branch=master
-    :target: https://travis-ci.org/kj-wroclaw/poznaj-backend
+.. image:: https://travis-ci.org/KlubJagiellonski/poznaj-app-backend.svg?branch=master
+    :target: https://travis-ci.org/KlubJagiellonski/poznaj-app-backend
     :alt: Build Status
 
-.. image:: http://poznajwroclaw-backend.readthedocs.io/en/latest/
-    :target: https://readthedocs.org/projects/poznajwroclaw-backend/badge/?version=latest
+.. image:: https://readthedocs.org/projects/poznaj-wrocaw/badge/?version=latest
+    :target: http://poznaj-wrocaw.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
 
-.. image:: https://codecov.io/gh/kj-wroclaw/poznaj-backend/branch/master/graph/badge.svg
-    :target: https://codecov.io/gh/kj-wroclaw/poznaj-backend
+.. image:: https://codecov.io/gh/KlubJagiellonski/poznaj-app-backend/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/KlubJagiellonski/poznaj-app-backend
     :alt: Codecoverage Status
 
+.. image:: https://pyup.io/repos/github/klubjagiellonski/poznaj-app-backend/shield.svg
+     :target: https://pyup.io/repos/github/klubjagiellonski/poznaj-app-backend/
+     :alt: Updates
+
+.. image:: https://pyup.io/repos/github/klubjagiellonski/poznaj-app-backend/python-3-shield.svg
+     :target: https://pyup.io/repos/github/klubjagiellonski/poznaj-app-backend/
+     :alt: Python 3
 
 This `Django`_ project includes code for backend of Poznaj Wrocław application. It tries to follow
 `12 Factor App Guinness <https://12factor.net/>`_.
@@ -40,8 +47,8 @@ Documentation
 
 Documentation for this project is available in the `docs`_ directory and `online`_.
 
-.. _docs: https://github.com/kj-wroclaw/poznaj-backend/tree/master/docs
-.. _online: http://poznaj-backend.readthedocs.io/en/latest/index.html
+.. _docs: https://github.com/KlubJagiellonski/poznaj-app-backend/tree/master/docs
+.. _online: http://poznaj-wrocaw.readthedocs.io/en/latest/
 
 
 If you would like to browse the documentation locally, you can do so with `sphinx`:
@@ -61,21 +68,21 @@ If you would like to browse the documentation locally, you can do so with `sphin
 Getting help
 ------------
 
-Use the `issue tracker <https://github.com/kj-wroclaw/poznaj-backend/issues>`_ to follow the development conversation.
-If you find a bug not listed in the issue tracker, please `file a bug report <https://github.com/kj-wroclaw/poznaj-backend/issues/new>`_.
+Use the `issue tracker <https://github.com/KlubJagiellonski/poznaj-app-backend/issues>`_ to follow the development conversation.
+If you find a bug not listed in the issue tracker, please `file a bug report <https://github.com/KlubJagiellonski/poznaj-app-backend/issues/new>`_.
 
 Getting involved
 ----------------
 
 We welcome your feedback and contributions. See the `contribution guidelines`_ for more details.
 
-.. _contribution guidelines: https://github.com/kj-wroclaw/poznaj-backend/blob/master/.github/CONTRIBUTING.md
+.. _contribution guidelines: https://github.com/KlubJagiellonski/poznaj-app-backend/blob/master/.github/CONTRIBUTING.md
 
 
 License
 -------
 
-1. `LICENSE <https://github.com/kj-wroclaw/poznaj-backend/blob/master/LICENSE>`_
+1. `LICENSE <https://github.com/KlubJagiellonski/poznaj-app-backend/blob/master/LICENSE>`_
 
 Credits
 -------
