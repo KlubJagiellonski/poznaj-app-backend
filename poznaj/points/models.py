@@ -10,5 +10,8 @@ class Point(models.Model):
     geom = gis_models.PointField()
     images = models.ManyToManyField(Image)
 
+    gis = gis_models.GeoManager()
+    objects = models.Manager()
+
     def __str__(self):
         return 'Point: {}'.format(self.title)

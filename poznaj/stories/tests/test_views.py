@@ -1,10 +1,12 @@
 import json
 
+from django.contrib.gis import geos
 from django.urls import reverse
 from rest_framework import status
 from test_plus.test import TestCase
 
 from poznaj.points.tests.factories import PointFactory
+from poznaj.stories.filters import WRONG_LAT_LONG_TEXT
 from poznaj.stories.models import Story
 
 from .factories import StoryFactory
@@ -29,6 +31,7 @@ class TestStoriesViewSet(TestCase):
                 'id': self.story.id,
                 'points': [self.point.id],
                 'title': self.story.title,
+                'first_point': self.story.first_point.id,
                 'description': self.story.description,
                 'duration': '{:02}:00:{:02}'.format(
                     self.story.duration.days, self.story.duration.seconds
@@ -76,3 +79,27 @@ class TestStoriesViewSet(TestCase):
         self.assertEqual(database_story.title, 'new_title')
         self.assertEqual(database_story.description, 'new_description')
         self.assertEqual(str(database_story.duration), '1:00:00')
+
+    def test_filter_story(self):
+        first_point = PointFactory(geom=geos.fromstr('POINT (9 9)'))
+        first_story = StoryFactory.create(first_point=first_point, points=(self.point,))
+        list_url_with_filter = '{}?lat=10.00&long=10.00'.format(
+            reverse('story-list')
+        )
+        response = self.client.get(list_url_with_filter, fromat='json')
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(
+            [first_story.id, self.story.id],
+            [story['id'] for story in response.json()]
+        )
+
+    def test_filter_wrong_arguments(self):
+        wrong_filter_url = '{}?lat=not_float&long=the_same'.format(
+            reverse('story-list')
+        )
+        response = self.client.get(wrong_filter_url, fromat='json')
+        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
+        self.assertEqual(
+            response.json(),
+            [WRONG_LAT_LONG_TEXT]
+        )

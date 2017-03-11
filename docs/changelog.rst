@@ -1,8 +1,13 @@
 Changelog
 =========
 
-All enhancements and patches to Poznaj Wroclaw backend will be documented in this file.
+All enhancements and patches to Poznaj backend will be documented in this file.
 This project adheres to `Semantic Versioning <http://semver.org/>`_.
+
+v1.2.0 (2017-03-05)
++++++++++++++++++++
+* Stories can be filtered by lat/long @krzysztofzuraw
+* Packages update via @pyup
 
 v1.1.0 (2017-02-17)
 +++++++++++++++++++
