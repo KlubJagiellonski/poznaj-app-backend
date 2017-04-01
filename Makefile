@@ -1,4 +1,4 @@
-.PHONY: help
+.PHONY: help clean-pyc clean-build clean-artifacts clean build run make-migrations migrate test enter-docker lint isort shell
 
 help:
 	@echo "Help"
