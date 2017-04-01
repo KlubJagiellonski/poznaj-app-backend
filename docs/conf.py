@@ -3,6 +3,7 @@
 import sphinx_rtd_theme
 
 from poznaj import VERSION
+
 # poznaj-backend documentation build configuration file, created by
 # sphinx-quickstart on Mon Oct 24 15:52:32 2016.
 #

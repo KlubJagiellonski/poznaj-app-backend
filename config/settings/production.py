@@ -2,8 +2,6 @@ import logging
 
 from django.utils import six
 
-from boto.s3.connection import OrdinaryCallingFormat
-
 from .common import *  # noqa
 
 # SECRET CONFIGURATION
@@ -57,10 +55,8 @@ INSTALLED_APPS += ('storages', )
 AWS_ACCESS_KEY_ID = env('DJANGO_AWS_ACCESS_KEY_ID')
 AWS_SECRET_ACCESS_KEY = env('DJANGO_AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = env('DJANGO_AWS_STORAGE_BUCKET_NAME')
-AWS_AUTO_CREATE_BUCKET = True
-AWS_QUERYSTRING_AUTH = False
-AWS_S3_CALLING_FORMAT = OrdinaryCallingFormat()
 AWS_S3_HOST = 's3-eu-west-1.amazonaws.com'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
 
 
 # AWS cache settings, don't change unless you know what you're doing:
@@ -73,8 +69,7 @@ AWS_HEADERS = {
     'Cache-Control': six.b('max-age=%d, s-maxage=%d, must-revalidate' % (
         AWS_EXPIRY, AWS_EXPIRY))
 }
-
-MEDIA_URL = 'https://s3.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
+MEDIA_URL = "https://%s/" % (AWS_S3_CUSTOM_DOMAIN)
 
 # Static Assets
 # ------------------------
