@@ -4,6 +4,10 @@ Changelog
 All enhancements and patches to Poznaj backend will be documented in this file.
 This project adheres to `Semantic Versioning <http://semver.org/>`_.
 
+v1.4.0 (2017-04-01)
++++++++++++++++++++
+* Enable AWS in production @krzysztofzuraw
+
 v1.3.0 (2017-03-11)
 +++++++++++++++++++
 * Migrate docstrings @krzysztofzuraw
