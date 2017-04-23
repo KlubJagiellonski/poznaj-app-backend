@@ -1,6 +1,7 @@
 import logging
 
 from boto.s3.connection import OrdinaryCallingFormat
+from django.utils import six
 
 from django.utils import six
 
@@ -61,7 +62,6 @@ AWS_AUTO_CREATE_BUCKET = True
 AWS_QUERYSTRING_AUTH = False
 AWS_S3_CALLING_FORMAT = OrdinaryCallingFormat()
 
-
 # AWS cache settings, don't change unless you know what you're doing:
 AWS_EXPIRY = 60 * 60 * 24 * 7
 
@@ -72,7 +72,9 @@ AWS_HEADERS = {
     'Cache-Control': six.b('max-age=%d, s-maxage=%d, must-revalidate' % (
         AWS_EXPIRY, AWS_EXPIRY))
 }
-MEDIA_URL = "https://%s/" % (AWS_S3_CUSTOM_DOMAIN)
+MEDIA_URL = 'https://s3.amazonaws.com/%s/' % AWS_STORAGE_BUCKET_NAME
+
+
 
 # Static Assets
 # ------------------------
