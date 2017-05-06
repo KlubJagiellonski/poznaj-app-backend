@@ -15,3 +15,6 @@ class Story(models.Model):
 
     def __str__(self):
         return 'Story: {}'.format(self.title)
+
+    def get_all_points(self):
+        return self.points.all()

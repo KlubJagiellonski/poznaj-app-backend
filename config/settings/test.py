@@ -55,3 +55,6 @@ TEMPLATES[0]['OPTIONS']['loaders'] = [
 ]
 # Turn off APP_DIRS
 TEMPLATES[0]['APP_DIRS'] = False
+
+# Turn on debuggin
+TEMPLATES[0]['OPTIONS']['debug'] = True

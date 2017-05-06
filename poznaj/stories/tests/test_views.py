@@ -13,7 +13,6 @@ from .factories import StoryFactory
 
 
 class TestStoriesViewSet(TestCase):
-
     def setUp(self):
         self.point = PointFactory()
         self.story = StoryFactory.create(points=(self.point,))
@@ -102,4 +101,28 @@ class TestStoriesViewSet(TestCase):
         self.assertEqual(
             response.json(),
             [WRONG_LAT_LONG_TEXT]
+        )
+
+    def test_get_all_points_for_story(self):
+        url = reverse('story-points', kwargs={'pk': self.story.id})
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, status.HTTP_200_OK)
+        self.assertEqual(
+            response.json(),
+            {
+                'features': [
+                    {
+                        'properties': {
+                            'images': [],
+                            'description': self.point.description,
+                            'title': self.point.title
+                        },
+                        'geometry': {
+                            'coordinates': [self.point.geom.x, self.point.geom.y], 'type': 'Point'
+                        },
+                        'type': 'Feature'
+                    }
+                ],
+                'type': 'FeatureCollection'
+            }
         )
