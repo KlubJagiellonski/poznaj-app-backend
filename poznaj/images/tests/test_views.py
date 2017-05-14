@@ -28,6 +28,7 @@ class TestImagesViewSet(TestCase):
             response.json(),
             [{
                 'id': self.image.id,
+                'copyright': 'CC0',
                 'title': self.image.title,
                 'image_file': 'http://testserver/media/{}'.format(self.image.image_file.name),
             }]
