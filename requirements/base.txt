@@ -15,7 +15,7 @@ psycopg2==2.7.1
 Pillow==4.1.1
 
 # DRFs
-djangorestframework==3.6.2
+djangorestframework==3.6.3
 djangorestframework-gis==0.11.1
 
 # Checks
