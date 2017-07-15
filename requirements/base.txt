@@ -2,7 +2,7 @@
 # like Pillow and psycopg2
 wheel==0.29.0
 
-django==1.11.1
+django==1.11.3
 
 # Configuration
 django-environ==0.4.3
@@ -12,11 +12,11 @@ whitenoise==3.3.0
 psycopg2==2.7.1
 
 # Images
-Pillow==4.1.1
+Pillow==4.2.1
 
 # DRFs
 djangorestframework==3.6.3
-djangorestframework-gis==0.11.1
+djangorestframework-gis==0.11.2
 
 # Checks
 django-health-check==2.3.0
