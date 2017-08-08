@@ -37,6 +37,9 @@ test:
 enter-docker:
 	docker-compose run django bash
 
+createsuperuser:
+	docker-compose run django python manage.py createsuperuser
+
 lint:
 	docker-compose exec django sh -c 'flake8 .'
 

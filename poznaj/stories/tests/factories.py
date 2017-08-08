@@ -11,14 +11,5 @@ class StoryFactory(factory.django.DjangoModelFactory):
     duration = factory.LazyFunction(datetime.timedelta)
     first_point = factory.SubFactory(PointFactory)
 
-    @factory.post_generation
-    def points(self, create, extracted, **kwargs):
-        if not create:
-            return
-
-        if extracted:
-            for point in extracted:
-                self.points.add(point)
-
     class Meta:
         model = 'stories.Story'

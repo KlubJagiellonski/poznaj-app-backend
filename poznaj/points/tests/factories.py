@@ -7,14 +7,5 @@ class PointFactory(factory.django.DjangoModelFactory):
     description = 'description'
     geom = geos.fromstr('POINT (0 0)')
 
-    @factory.post_generation
-    def images(self, create, extracted, **kwargs):
-        if not create:
-            return
-
-        if extracted:
-            for image in extracted:
-                self.images.add(image)
-
     class Meta:
         model = 'points.Point'

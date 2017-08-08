@@ -8,6 +8,8 @@ class TestStoryModelMethods(TransactionTestCase):
 
     def test_get_all_points(self):
         point = PointFactory()
-        story = StoryFactory.create(points=(point,))
+        story = StoryFactory.create()
+        story.points = (point,)
+        story.save()
         with self.assertNumQueries(1):
             self.assertQuerysetEqual(story.get_all_points(), ['<Point: {}>'.format(str(point))])
