@@ -1,6 +1,9 @@
 language: python
 python:
   - "3.5"
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install --yes postgresql-9.5-postgis-2.3
 install:
   - pip install --upgrade pip wheel setuptools coverage codecov django_coverage_plugin tox
 script: tox
@@ -16,5 +19,6 @@ after_success:
 notifications:
   email: false
 cache:
+  apt: true
   pip: true
 
