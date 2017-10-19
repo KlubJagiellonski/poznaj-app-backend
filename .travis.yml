@@ -1,6 +1,11 @@
 language: python
 python:
   - "3.5"
+addons:
+  postgresql: "9.5"
+  apt:
+    packages:
+      - postgresql-9.5-postgis-2.3
 install:
   - pip install --upgrade pip wheel setuptools coverage codecov django_coverage_plugin tox
 script: tox
@@ -16,5 +21,6 @@ after_success:
 notifications:
   email: false
 cache:
+  apt: true
   pip: true
 
