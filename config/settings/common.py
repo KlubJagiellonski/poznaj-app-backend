@@ -36,18 +36,13 @@ DJANGO_APPS = (
 )
 
 THIRD_PARTY_APPS = (
-    'rest_framework',
-    'rest_framework_gis',
-    'health_check',
-    'health_check.db',
-    'health_check.cache',
-    'health_check.storage',
+    'rest_framework', 'rest_framework_gis', 'health_check', 'health_check.db',
+    'health_check.cache', 'health_check.storage',
 )
 
 LOCAL_APPS = (
-    'poznaj.points.apps.PointsConfig',
-    'poznaj.images.apps.ImagesConfig',
-    'poznaj.stories.apps.StoriesConfig'
+    'poznaj.points.apps.PointsConfig', 'poznaj.images.apps.ImagesConfig',
+    'poznaj.stories.apps.StoriesConfig', 'poznaj.mobile.apps.MobileConfig',
 )
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -58,8 +53,7 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 MIDDLEWARE = (
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.common.CommonMiddleware', 'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -97,7 +91,8 @@ TEMPLATES = [
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [str(APPS_DIR.path('templates'))],
         'OPTIONS': {
-            'debug': False,
+            'debug':
+            False,
             'loaders': [
                 'django.template.loaders.filesystem.Loader',
                 'django.template.loaders.app_directories.Loader',
@@ -116,9 +111,7 @@ TEMPLATES = [
 # ------------------------------------------------------------------------------
 STATIC_URL = '/static/'
 STATIC_ROOT = str(ROOT_DIR('staticfiles'))
-STATICFILES_DIRS = (
-    str(APPS_DIR.path('static')),
-)
+STATICFILES_DIRS = (str(APPS_DIR.path('static')), )
 # URL Configuration
 # ------------------------------------------------------------------------------
 ROOT_URLCONF = 'config.urls'
@@ -157,9 +150,7 @@ MEDIA_URL = '/media/'
 # -------------------------------------------------------------------------------
 REST_FRAMEWORK = {
     'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.AcceptHeaderVersioning',
-    'DEFAULT_PERMISSION_CLASSES': (
-        'config.permissions.IsReadOnly',
-    )
+    'DEFAULT_PERMISSION_CLASSES': ('config.permissions.IsReadOnly', )
 }
 
 ADMIN_URL = r'^admin/'
