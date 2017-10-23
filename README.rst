@@ -13,13 +13,10 @@ Poznaj
     :target: https://codecov.io/gh/KlubJagiellonski/poznaj-app-backend
     :alt: Codecoverage Status
 
-.. image:: https://pyup.io/repos/github/klubjagiellonski/poznaj-app-backend/shield.svg
-     :target: https://pyup.io/repos/github/klubjagiellonski/poznaj-app-backend/
+.. image:: https://pyup.io/repos/github/KlubJagiellonski/poznaj-app-backend/shield.svg
+     :target: https://pyup.io/repos/github/KlubJagiellonski/poznaj-app-backend/
      :alt: Updates
 
-.. image:: https://pyup.io/repos/github/klubjagiellonski/poznaj-app-backend/python-3-shield.svg
-     :target: https://pyup.io/repos/github/klubjagiellonski/poznaj-app-backend/
-     :alt: Python 3
 
 This `Django`_ project includes code for backend of Poznaj Wrocław application. It tries to follow
 `12 Factor App Guinness <https://12factor.net/>`_.
