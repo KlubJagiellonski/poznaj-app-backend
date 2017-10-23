@@ -1,22 +1,22 @@
 # Wheel 0.25+ needed to install certain packages on CPython 3.5+
 # like Pillow and psycopg2
-wheel==0.29.0
+wheel==0.30.0
 
-django==1.11.3
+django==1.11.6
 
 # Configuration
-django-environ==0.4.3
-whitenoise==3.3.0
+django-environ==0.4.4
+whitenoise==3.3.1
 
 # Python-PostgreSQL Database Adapter
-psycopg2==2.7.1
+psycopg2==2.7.3.1
 
 # Images
-Pillow==4.2.1
+Pillow==4.3.0
 
 # DRFs
-djangorestframework==3.6.3
+djangorestframework==3.7.1
 djangorestframework-gis==0.11.2
 
 # Checks
-django-health-check==2.3.0
+django-health-check==2.4.0
