@@ -55,3 +55,8 @@ v0.1.0 (2016-10-20)
 +++++++++++++++++++
 
 * Add support for docker and docker compose @krzysztofzuraw
+
+v2.1.0 (2017-10-23)
++++++++++++++++++++
+
+* Add simple mobile views
