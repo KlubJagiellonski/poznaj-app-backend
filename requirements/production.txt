@@ -12,6 +12,6 @@ raven==6.2.1
 
 # Static and Media Storage
 # -----------------------------------------------------------------------------
-boto3==1.4.4
+boto3==1.4.7
 django-storages==1.6.3
 Collectfast==0.5.2
