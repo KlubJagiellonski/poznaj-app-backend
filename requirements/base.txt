@@ -1,6 +1,6 @@
 # Wheel 0.25+ needed to install certain packages on CPython 3.5+
 # like Pillow and psycopg2
-wheel==0.29.0
+wheel==0.30.0
 
 django==1.11.3
 
