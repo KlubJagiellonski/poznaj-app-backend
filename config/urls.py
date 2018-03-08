@@ -3,6 +3,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from rest_framework import routers
 
+from poznaj.views import MainView
 from poznaj.images.views import ImagesViewSet
 from poznaj.points.views import PointsViewSet
 from poznaj.stories.views import StoriesViewSet
@@ -14,6 +15,7 @@ router.register(r'stories', StoriesViewSet)
 
 urlpatterns = [
     url(settings.ADMIN_URL, admin.site.urls),
+    url(r'^$', MainView.as_view()),
     url(r'^api/', include(router.urls)),
     url(r'^health/', include('health_check.urls')),
     url(r'^mobile/', include('poznaj.mobile.urls')),
