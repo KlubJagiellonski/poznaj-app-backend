@@ -2,7 +2,7 @@
 # like Pillow and psycopg2
 wheel==0.30.0
 
-django==1.11.7
+django==2.0.3
 
 # Configuration
 django-environ==0.4.4
