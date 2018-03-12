@@ -19,4 +19,4 @@ djangorestframework==3.7.7
 djangorestframework-gis==0.12
 
 # Checks
-django-health-check==2.4.0
+django-health-check==3.5.0
